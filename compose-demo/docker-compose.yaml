@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  web:
+    image: nginx
+    container_name: web-server
+    ports:
+      - "8086:80"
+
+  database:
+    image: mysql:8.0
+    container_name: database-server
+    environment:
+      MYSQL_ROOT_PASSWORD: "root123"
+    ports:
+      - "3307:3306"
